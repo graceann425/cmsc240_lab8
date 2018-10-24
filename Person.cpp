@@ -16,7 +16,19 @@
         Email = "";
         Phone = 0;
     }
-    Person::Person(const Person& other) {}
+
+    Person::Person(const Person& other) 
+    {
+        this->FirstName = other.FirstName;
+        this->LastName = other.LastName;
+        this->DateOfBirth = other.DateOfBirth;
+        this->Address = other.Address;
+        this->NetID = other.NetID;
+        this->URID = other.URID;
+        this->Email = other.Email;
+        this->Phone = other.Phone;
+    }
+
     Person::Person(int urid, std::string netid, std::string lname, std::string fname, 
             int dob_day, int dob_month, int dob_year,
             std::string email, std::string address, long phone) 
@@ -34,6 +46,7 @@
         Email = email;
         Phone = phone;  
     }
+
     Person::~Person() {}
 
     std::string Person::getFirstName()
