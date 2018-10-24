@@ -2,11 +2,11 @@ EXECS = tester
 OBJS = Person.o Student.o tester.o
 
 CC = g++
-CCFLAGS = -Wall -Wno-deprecated -Werror=return-type -g
+CCFLAGS = -std=c++11 -Wall -Wno-deprecated -Werror=return-type -g
 
 all: $(EXECS)
 
-VectorTester: $(OBJS)
+tester: $(OBJS)
 	$(CC) $(CCFLAGS) $^ -o $@
 
 %.o: %.cpp *.h
