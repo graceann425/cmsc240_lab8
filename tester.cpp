@@ -48,7 +48,7 @@ int main()
 	cout << "Student s;" << endl; 
 	Student s;
 
-	cout << "s.setAdmitDate(12,08,2016)" << endl; s.setAdmitDate(12,08,2016-1900); 
+	cout << "s.setAdmitDate(12,08,2016)" << endl; s.setAdmitDate(12,8,2016-1900); 
 	cout << "Admit Date: " << s.getAdmitDate() << "[Expected: 12 Sep 2016]" << endl;
 
 	cout << "s.setSchool(AS)" << endl; s.setSchool(AS); 

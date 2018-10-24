@@ -1,6 +1,7 @@
 
 #include <list>
 #include "Person.h"
+#include "Student.h"
 
     Student() 
     {
@@ -19,24 +20,38 @@
                double units_completed);
     ~Student();
 
-        std::list<std::string> getCourses();
-        void                   addCourse(std::string course);
-        void                   removeCourse(std::string course);
-        void                   printCourses();
-        void                   setCourses(std::list<std::string> courses);
-        void                   clearCourses();
+        std::list<std::string> getCourses(){
+		courses = new std::list<std::string>;
+		return courses;
+	}
+        void                   addCourse(std::string course){}
+        void                   removeCourse(std::string course){}
+        void                   printCourses(){}
+        void                   setCourses(std::list<std::string> courses){}
+        void                   clearCourses(){}
 
-        struct tm              getAdmitDate();
-        School                 getSchool();
-        double                 getGPA();
-        double                 getUnitsCompleted();
-        bool                   isFullTime();
+        struct tm getAdmitDate(){
+		return AdmitDate;
+	}
 
-        void setAdmitDate(int day, int month, int year);
-        void setSchool(School school);
-        void setGPA(double gpa);
-        void setUnitsCompleted(double units);
-        void setFullTimeStatus(bool isFullTime);
+        School getSchool(){
+		return School;
+	}
+
+        double getGPA(){
+		return GPA;
+	}
+        double getUnitsCompleted(){
+		return UnitsCompleted;
+	}
+        bool isFullTime(){
+		return isFullTime;
+	}
+	
+        void setAdmitDate(int day, int month, int year){}
+        void setSchool(School school){}
+        void setGPA(double gpa){}
+        void setUnitsCompleted(double units){}
+        void setFullTimeStatus(bool isFullTime){}
 };
 
-#endif
