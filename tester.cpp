@@ -89,6 +89,7 @@ int main()
 	cout << "Courses: " << s.printCourses() << "[Expected: CMSC 240, CMSC 222]" << endl;
 	cout << "s.clearCourses()" << endl; s.clearCourses(); 
 	cout << "Courses: " << s.printCourses() << "[Expected: \"\"]" << endl;
-
+	
+	return 0;
 
 }

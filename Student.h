@@ -12,12 +12,14 @@ class Student : public Person
         enum School {AS, JSLS, LAW, RSB, SPCS, UNDEFINED};
 
     protected:
-        std::list<std::string> Courses;
-        tm AdmitDate;
-        School School;
-        double GPA;
-        double UnitsCompleted;
-        bool isFullTime;
+        std::list<std::string> courses;
+        int admit_day;
+	int admit_month;
+	int admit_year;
+	School school;
+        double gpa;
+        double unitsCompleted;
+        bool fullTime;
         
     public:
         Student();                      // explicitly call Person() on implementation
@@ -49,5 +51,4 @@ class Student : public Person
         void setUnitsCompleted(double units);
         void setFullTimeStatus(bool isFullTime);
 };
-
 #endif
