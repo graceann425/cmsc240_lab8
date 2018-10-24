@@ -24,36 +24,36 @@
 
     std::string Person::getFirstName()
     {
-    	return "";
+        return "";
     }
     std::string  Person::getLastName()
     {
-    	return "";
+        return "";
     }
     struct tm    Person::getDateOfBirth()
     {
-    	return DateOfBirth;
+        return DateOfBirth;
     } 
             // see http://www.cplusplus.com/reference/ctime/tm/
     std::string  Person::getAddress()
     {
-    	return "";
+        return "";
     }
     std::string  Person::getNetID()
     {
-    	return "";
+        return "";
     }
     int          Person::getURID()
     {
-    	return 0;
+        return 0;
     }
     std::string  Person::getEmail()
     {
-    	return "";
+        return "";
     }
     long         Person::getPhone()
     {
-    	return 0;
+        return 0;
     }
 
     void Person::setFirstName(std::string fname)
