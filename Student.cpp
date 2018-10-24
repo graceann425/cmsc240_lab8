@@ -53,4 +53,3 @@
         void setUnitsCompleted(double units){}
         void setFullTimeStatus(bool isFullTime){}
 };
-

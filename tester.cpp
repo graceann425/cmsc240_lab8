@@ -11,13 +11,21 @@ int main()
 	cout << "*****************************************" << endl << endl;
 
 	cout << "Testing constructors" << endl;
+	cout << "Default constructor" << endl;
+	cout << "Person p;" << endl; 
+	Person p;
+	cout << endl << "Copy constructor" << endl;
+	cout << "Person q(p);" << endl; 
+	Person q(p);
+	cout << endl << "Initializing constructor" << endl;
+	cout << "Person r(12345678, \"ll5br\", \"Lawson\", \"Lilly\", 25, 4, 1998, \"lilly.lawson@richmond.edu\", \"28 Westhampton Way Richmond, VA 23173\", 8675309);" << endl; 
+	Person r(12345678, "gr8ci", "Lawson", "Lilly", 25, 4, 1998, "lilly.lawson@richmond.edu", "28 Westhampton Way Richmond, VA 23173", 8675309);
 
+	cout << "*****************************************" << endl;
 
 	cout << "Testing setters/getters:" << endl; 
 	cout << "*****************************************" << endl;
 	cout << "Person p;" << endl; 
-	Person p;
-
 	cout << "p.setFirstName(\"Lilly\")" << endl; p.setFirstName("Lilly"); 
 	cout << "First Name: " << p.getFirstName() << "[Expected: Lilly]" << endl;
 	cout << "p.setLastName(\"Lawson\")" << endl; p.setLastName("Lawson"); 
