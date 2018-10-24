@@ -19,7 +19,21 @@
     Person::Person(const Person& other) {}
     Person::Person(int urid, std::string netid, std::string lname, std::string fname, 
             int dob_day, int dob_month, int dob_year,
-            std::string email, std::string address, long phone) {}
+            std::string email, std::string address, long phone) 
+    {
+        FirstName = fname;
+        LastName = lname;
+        struct tm DOB;
+        DOB.tm_year = dob_year - 1900;
+        DOB.tm_mon = dob_month - 1;
+        DOB.tm_mday = dob_day;
+        DateOfBirth = DOB;
+        Address = address;
+        NetID = netid;
+        URID = urid;
+        Email = email;
+        Phone = phone;  
+    }
     Person::~Person() {}
 
     std::string Person::getFirstName()
