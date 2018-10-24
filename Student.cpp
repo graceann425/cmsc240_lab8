@@ -6,7 +6,7 @@
     Student() 
     {
         AdmitDate = 0;
-        School = AS;
+        std::School = AS;
         GPA = 0.0;
         UnitsCompleted = 0;
         isFullTime = true; 
@@ -15,8 +15,7 @@
     Student(int urid, std::string netid, std::string lname, std::string fname, 
                int dob_day, int dob_mo, int dob_yr, 
                std::string email, std::string address, long phone,
-               int day_admit, int month_admit, int year_admit,
-               School school, bool is_full_time, 
+               std::School school, int day_admit, int month_admit, int year_admit,
                double units_completed);
     ~Student();
 
@@ -34,7 +33,7 @@
 		return AdmitDate;
 	}
 
-        School getSchool(){
+        std::School getSchool(){
 		return School;
 	}
 
@@ -49,7 +48,7 @@
 	}
 	
         void setAdmitDate(int day, int month, int year){}
-        void setSchool(School school){}
+        void setSchool(std::School school){}
         void setGPA(double gpa){}
         void setUnitsCompleted(double units){}
         void setFullTimeStatus(bool isFullTime){}
