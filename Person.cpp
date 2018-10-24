@@ -1,6 +1,7 @@
 
 #include <string>
 #include <ctime>
+#include <iostream>
 #include "Person.h"
 
 
@@ -15,6 +16,7 @@
         URID = 0;
         Email = "";
         Phone = 0;
+        std::cout << "inside default constructor" << std::endl;
     }
 
     Person::Person(const Person& other) 
@@ -27,6 +29,7 @@
         this->URID = other.URID;
         this->Email = other.Email;
         this->Phone = other.Phone;
+        std::cout << "inside copy constructor" << std::endl;
     }
 
     Person::Person(int urid, std::string netid, std::string lname, std::string fname, 
@@ -44,60 +47,96 @@
         NetID = netid;
         URID = urid;
         Email = email;
-        Phone = phone;  
+        Phone = phone;
+        std::cout << "inside initializing constructor" << std::endl;  
     }
 
     Person::~Person() {}
 
     std::string Person::getFirstName()
     {
-        return "";
+        return FirstName;
     }
+
     std::string  Person::getLastName()
     {
-        return "";
+        return LastName;
     }
+
     struct tm    Person::getDateOfBirth()
     {
         return DateOfBirth;
     } 
             // see http://www.cplusplus.com/reference/ctime/tm/
+    
     std::string  Person::getAddress()
     {
-        return "";
-    }
-    std::string  Person::getNetID()
-    {
-        return "";
-    }
-    int          Person::getURID()
-    {
-        return 0;
-    }
-    std::string  Person::getEmail()
-    {
-        return "";
-    }
-    long         Person::getPhone()
-    {
-        return 0;
+        return Address;
     }
 
+    std::string  Person::getNetID()
+    {
+        return NetID;
+    }
+
+    int Person::getURID()
+    {
+        return URID;
+    }
+
+    std::string  Person::getEmail()
+    {
+        return Email;
+    }
+
+    long Person::getPhone()
+    {
+        return Phone;
+    }
+
+
     void Person::setFirstName(std::string fname)
-    {}
+    {
+        FirstName = fname;
+    }
+
     void Person::setLastName(std::string lname)
-    {}
+    {
+        LastName = lname;
+    }
+
     void Person::setDateOfBirth(int day, int month, int year)
-    {}
+    {
+        struct tm DOB;
+        DOB.tm_year = year - 1900;
+        DOB.tm_mon = month - 1;
+        DOB.tm_mday = day; 
+        DateOfBirth = DOB;       
+    }
+
     void Person::setAddress(std::string address)
-    {}
+    {
+        Address = address;
+    }
+
     void Person::setNetID(std::string netid)
-    {}
+    {
+        NetID = netid;
+    }
+
     void Person::setURID(int urid)
-    {}
+    {
+        URID = urid;
+    }
+
     void Person::setEmail(std::string email)
-    {}
+    {
+        Email = email;
+    }
+
     void Person::setPhone(long number)
-    {}
+    {
+        Phone = number;
+    }
 
 
