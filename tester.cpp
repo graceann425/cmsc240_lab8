@@ -30,13 +30,13 @@ int main()
 	cout << "First Name: " << p.getFirstName() << "[Expected: Lilly]" << endl;
 	cout << "p.setLastName(\"Lawson\")" << endl; p.setLastName("Lawson"); 
 	cout << "Last Name: " << p.getLastName() << "[Expected: Lawson]" << endl;
-	cout << "p.setDateOfBirth(25, 03, 1998)" << endl; p.setDateOfBirth(25, 03, 1998-1900); 
+	cout << "p.setDateOfBirth(25, 3, 1998)" << endl; p.setDateOfBirth(25, 3, 1998-1900); 
 	cout << "Date of Birth: " << p.getDateOfBirth() << "[Expected: 25 Apr 1998]" << endl;
 	cout << "p.setAddress(\"28 Westhampton Way Richmond, VA 23173\")" << endl; p.setLastName("28 Westhampton Way Richmond, VA 23173"); 
 	cout << "Address: " << p.getAddress() << "[Expected: 28 Westhampton Way Richmond, VA 23173]" << endl;
 	cout << "p.setNetID(\"ll5br\")" << endl; p.setNetID("ll5br"); 
 	cout << "Net ID: " << p.getNetID() << "[Expected: ll5br]" << endl;	
-	cout << "p.setURID(12345678)" << endl; p.setURID("12345678"); 
+	cout << "p.setURID(12345678)" << endl; p.setURID(12345678); 
 	cout << "URID: " << p.getURID() << "[Expected: 12345678]" << endl;
 	cout << "p.setEmail(\"lilly.lawson@richmond.edu\")" << endl; p.setEmail("lilly.lawson@richmond.edu"); 
 	cout << "Email: " << p.getEmail() << "[Expected: lilly.lawson@richmond.edu]" << endl;
@@ -59,7 +59,7 @@ int main()
 	cout << "s.setAdmitDate(12,08,2016)" << endl; s.setAdmitDate(12,8,2016-1900); 
 	cout << "Admit Date: " << s.getAdmitDate() << "[Expected: 12 Sep 2016]" << endl;
 
-	cout << "s.setSchool(AS)" << endl; s.setSchool(AS); 
+	cout << "s.setSchool(Student::AS)" << endl; s.setSchool(Student::AS); 
 	cout << "School: " << s.getSchool() << "[Expected: AS]" << endl;
     
 	cout << "s.setGPA(4.0)" << endl; s.setGPA(4.0); 
@@ -68,8 +68,8 @@ int main()
 	cout << "s.setUnitsCompleted(12.0)" << endl; s.setUnitsCompleted(12.0); 
 	cout << "Units Completed: " << s.getUnitsCompleted() << "[Expected: 12.0]" << endl;
 
-	cout << "s.setFullTimeStatus(\"True\")" << endl; s.setFullTimeStatus(True); 
-	cout << "Admit Date: " << s.isFullTime() << "[Expected: True]" << endl;
+	cout << "s.setFullTimeStatus(\"true\")" << endl; s.setFullTimeStatus(true); 
+	cout << "Admit Date: " << s.isFullTime() << "[Expected: true]" << endl;
 
 
 	cout << "Testing courses:" << endl; 
