@@ -14,9 +14,9 @@ class Student : public Person
     protected:
         std::list<std::string> courses;
         int admit_day;
-	int admit_month;
-	int admit_year;
-	School school;
+	    int admit_month;
+	    int admit_year;
+	    School school;
         double gpa;
         double unitsCompleted;
         bool fullTime;
