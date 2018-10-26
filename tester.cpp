@@ -6,10 +6,12 @@ using namespace std;
 
 int main()
 {
+	//testing person class
 	cout << "*****************************************" << endl;
 	cout << "Testing Person" << endl;
 	cout << "*****************************************" << endl << endl;
 
+	//testing person constructors (put print statment in each constructor)
 	cout << "*****************************************" << endl;
 	cout << "Constructors" << endl;
 	cout << "*****************************************" << endl << endl;
@@ -26,6 +28,8 @@ int main()
 	cout << "Person r(12345678, \"ll5br\", \"Lawson\", \"Lilly\", 25, 4, 1998, \"lilly.lawson@richmond.edu\", \"28 Westhampton Way Richmond, VA 23173\", 8675309);" << endl; 
 	Person r(12345678, "gr8ci", "Lawson", "Lilly", 25, 4, 1998, "lilly.lawson@richmond.edu", "28 Westhampton Way Richmond, VA 23173", 8675309);
 	cout << endl;
+
+	//testing person class setter and getter methods 
 	cout << endl << "*****************************************" << endl;
 
 	cout << "Setters and Getters" << endl; 
@@ -61,9 +65,14 @@ int main()
 	cout << "Phone: " << p.getPhone() << " [Expected: 8675309]" << endl;
 	cout << "*****************************************" << endl << endl;
 
+	//testing student class
+
 	cout << "*****************************************" << endl;
 	cout << "Testing Student" << endl;
 	cout << "*****************************************" << endl << endl;
+
+	//testing student constructors (put print statement in each constructor)
+	//also calls on person constructors of the same type
 
 	cout << "*****************************************" << endl;
 	cout << "Constructors" << endl;
@@ -83,6 +92,7 @@ int main()
 	cout << endl;
 	cout << endl << "*****************************************" << endl;
 
+	//testing setter and getter methods for student class
 
 	cout << "Setters and Getters" << endl; 
 	cout << "*****************************************" << endl << endl;
@@ -104,6 +114,7 @@ int main()
 	cout << "s.setFullTimeStatus(\"true\")" << endl; s.setFullTimeStatus(true); 
 	cout << "Full Time: " << s.isFullTime() << " [Expected: 1]" << endl << endl;
 
+	//testing course list methods for the student class
 
 	cout << "*****************************************" << endl;
 	cout << "Adding/Removing Courses" << endl; 

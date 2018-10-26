@@ -24,16 +24,17 @@ class Person
                std::string email, std::string address, long phone);
         ~Person();
 
+        //getter methods
         std::string  getFirstName();
         std::string  getLastName();
         struct tm    getDateOfBirth(); 
-            // see http://www.cplusplus.com/reference/ctime/tm/
         std::string  getAddress();
         std::string  getNetID();
         int          getURID();
         std::string  getEmail();
         long         getPhone();
 
+        //setter methods
         void setFirstName(std::string fname);
         void setLastName(std::string lname);
         void setDateOfBirth(int day, int month, int year);

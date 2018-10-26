@@ -5,7 +5,7 @@
 #include "Person.h"
 
 
-Person::Person()
+Person::Person() //default constructor
 {
     FirstName = "";
     LastName = "";
@@ -18,7 +18,7 @@ Person::Person()
     std::cout << "inside person default constructor" << std::endl;
 }
 
-Person::Person(const Person& other) 
+Person::Person(const Person& other) //copy constructor
 {
     this->FirstName = other.FirstName;
     this->LastName = other.LastName;
@@ -51,6 +51,8 @@ Person::Person(int urid, std::string netid, std::string lname, std::string fname
 }
 
 Person::~Person() {}
+
+//getter methods
 
 std::string Person::getFirstName()
 {
@@ -92,6 +94,8 @@ long Person::getPhone()
 {
     return Phone;
 }
+
+//setter methods 
 
 void Person::setFirstName(std::string fname)
 {

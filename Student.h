@@ -22,8 +22,8 @@ class Student : public Person
         bool fullTime;
         
     public:
-        Student();                      // explicitly call Person() on implementation
-        Student(const Student& other);  // call Person(other) on implementation
+        Student();                      // explicitly calls Person() on implementation
+        Student(const Student& other);  // calls Person(other) on implementation
         Student(int urid, std::string netid, std::string lname, std::string fname, 
                int dob_day, int dob_mo, int dob_yr, 
                std::string email, std::string address, long phone,
@@ -32,6 +32,7 @@ class Student : public Person
                double units_completed);
         ~Student();
 
+        //course list methods
         std::list<std::string> getCourses();
         void                   addCourse(std::string course);
         void                   removeCourse(std::string course);
@@ -39,12 +40,14 @@ class Student : public Person
         void                   setCourses(std::list<std::string> courses);
         void                   clearCourses();
 
+        //getter methods
         struct tm              getAdmitDate();
         School                 getSchool();
         double                 getGPA();
         double                 getUnitsCompleted();
         bool                   isFullTime();
 
+        //setter methods
         void setAdmitDate(int day, int month, int year);
         void setSchool(School school);
         void setGPA(double gpa);

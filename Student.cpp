@@ -4,8 +4,8 @@
 #include "Person.h"
 #include "Student.h"
 
-    Student::Student() 
-        :Person()
+    Student::Student() //default constructor 
+            :Person() //calls default person constructor
 	{
         admit_day = 1;
 	    admit_month = 0;
@@ -17,8 +17,8 @@
         std::cout << "inside student default constructor" << std::endl;
     }              
 
-    Student::Student(const Student& other) 
-        :Person(other)
+    Student::Student(const Student& other) //copy constructor
+        :Person(other) //calls person copy constructor
     {
         this->admit_day = other.admit_day;
         this->admit_month = other.admit_month;
@@ -49,6 +49,9 @@
     }
 
     Student::~Student(){}
+
+
+    //course list methods
 
     std::list<std::string> Student::getCourses()
     {
@@ -84,6 +87,8 @@
         courses.clear();
     }
 
+    //getter methods
+
     struct tm Student::getAdmitDate()
     {
 		struct tm admitDate;
@@ -113,6 +118,8 @@
 		return fullTime;
 	}
 	
+    //setter methods
+
     void Student::setAdmitDate(int day, int month, int year)
     {
         admit_day = day;
