@@ -37,8 +37,11 @@ int main()
 	cout << "p.setLastName(\"Lawson\")" << endl; p.setLastName("Lawson"); 
 	cout << "Last Name: " << p.getLastName() << " [Expected: Lawson]" << endl << endl;
 
-	//cout << "p.setDateOfBirth(25, 3, 1998)" << endl; p.setDateOfBirth(25, 3, 1998-1900); 
-	//cout << "Date of Birth: " << p.getDateOfBirth() << "[Expected: 25 Apr 1998]" << endl << endl;
+	cout << "p.setDateOfBirth(25, 4, 1998)" << endl; p.setDateOfBirth(25, 4, 1998); 
+	cout << "Date of Birth: ";
+	struct tm bday = p.getDateOfBirth();
+	cout << bday.tm_mon + 1 << " " << bday.tm_mday << " " << bday.tm_year + 1900 << " [Expected: 4 25 1998]" << endl << endl;
+
 
 	cout << "p.setAddress(\"28 Westhampton Way Richmond, VA 23173\")" << endl; 
 	p.setAddress("28 Westhampton Way Richmond, VA 23173"); 
@@ -84,8 +87,10 @@ int main()
 	cout << "Setters and Getters" << endl; 
 	cout << "*****************************************" << endl << endl;
 
-	//cout << "s.setAdmitDate(12,08,2016)" << endl; s.setAdmitDate(12,8,2016-1900); 
-	//cout << "Admit Date: " << s.getAdmitDate() << "[Expected: 12 Sep 2016]" << endl << endl;
+	cout << "s.setAdmitDate(12, 8, 2016)" << endl; s.setAdmitDate(12,8,2016); 
+	cout << "Admit Date: ";
+	struct tm date = s.getAdmitDate();
+	cout << date.tm_mon + 1 << " " << date.tm_mday << " " << date.tm_year + 1900 << " [Expected: 8 12 2016]" << endl << endl;
 
 	cout << "s.setSchool(Student::RSB)" << endl; s.setSchool(Student::RSB); 
 	cout << "School: " << s.getSchool() << " [Expected: 3]" << endl << endl;

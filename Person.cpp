@@ -15,7 +15,7 @@ Person::Person()
     URID = 0;
     Email = "";
     Phone = 0;
-    std::cout << "inside default constructor" << std::endl;
+    std::cout << "inside person default constructor" << std::endl;
 }
 
 Person::Person(const Person& other) 
@@ -28,7 +28,7 @@ Person::Person(const Person& other)
     this->URID = other.URID;
     this->Email = other.Email;
     this->Phone = other.Phone;
-    std::cout << "inside copy constructor" << std::endl;
+    std::cout << "inside person copy constructor" << std::endl;
 }
 
 Person::Person(int urid, std::string netid, std::string lname, std::string fname, 
@@ -47,7 +47,7 @@ Person::Person(int urid, std::string netid, std::string lname, std::string fname
     URID = urid;
     Email = email;
     Phone = phone;
-    std::cout << "inside initializing constructor" << std::endl;  
+    std::cout << "inside person initializing constructor" << std::endl;  
 }
 
 Person::~Person() {}
@@ -62,7 +62,7 @@ std::string Person::getLastName()
     return LastName;
 }
 
-struct tm    Person::getDateOfBirth()
+struct tm Person::getDateOfBirth()
 {
     return DateOfBirth;
 } 

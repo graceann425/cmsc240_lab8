@@ -7,13 +7,14 @@
     Student::Student() 
         :Person()
 	{
-        admit_day = 0;
+        admit_day = 1;
 	    admit_month = 0;
 	    admit_year = 1900;
         school = AS;
         gpa = 0.0;
         unitsCompleted = 0;
         fullTime = false; 
+        std::cout << "inside student default constructor" << std::endl;
     }              
 
     Student::Student(const Student& other) 
@@ -26,6 +27,7 @@
         this->gpa = other.gpa;
         this->unitsCompleted = other.unitsCompleted;
         this->fullTime = other.fullTime;  
+        std::cout << "inside stduent copy constructor" << std::endl;
     }  
 
     Student::Student(int urid, std::string netid, std::string lname, std::string fname, 
@@ -37,12 +39,13 @@
                email, address, phone)
     { 
         admit_day = day_admit;
-        admit_month = month_admit;
-        admit_year = year_admit;
+        admit_month = month_admit - 1;
+        admit_year = year_admit - 1900;
         this->school = school;
         gpa = 0.0;
         unitsCompleted = units_completed;
-        fullTime = is_full_time;   
+        fullTime = is_full_time; 
+        std::cout << "inside student initializing constructor" << std::endl;  
     }
 
     Student::~Student(){}
@@ -112,7 +115,9 @@
 	
     void Student::setAdmitDate(int day, int month, int year)
     {
-
+        admit_day = day;
+        admit_month = month - 1;
+        admit_year = year - 1900;
     }
 
     void Student::setSchool(Student::School school)
