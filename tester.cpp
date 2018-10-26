@@ -87,14 +87,14 @@ int main()
 	//cout << "s.setAdmitDate(12,08,2016)" << endl; s.setAdmitDate(12,8,2016-1900); 
 	//cout << "Admit Date: " << s.getAdmitDate() << "[Expected: 12 Sep 2016]" << endl << endl;
 
-	cout << "s.setSchool(Student::AS)" << endl; s.setSchool(Student::AS); 
-	cout << "School: " << s.getSchool() << " [Expected: AS]" << endl << endl;
+	cout << "s.setSchool(Student::RSB)" << endl; s.setSchool(Student::RSB); 
+	cout << "School: " << s.getSchool() << " [Expected: 3]" << endl << endl;
     
 	cout << "s.setGPA(4.0)" << endl; s.setGPA(4.0); 
-	cout << "GPA: " << s.getGPA() << " [Expected: 4.0]" << endl << endl;
+	cout << "GPA: " << s.getGPA() << " [Expected: 4]" << endl << endl;
 
 	cout << "s.setUnitsCompleted(12.0)" << endl; s.setUnitsCompleted(12.0); 
-	cout << "Units Completed: " << s.getUnitsCompleted() << " [Expected: 12.0]" << endl << endl;
+	cout << "Units Completed: " << s.getUnitsCompleted() << " [Expected: 12]" << endl << endl;
 
 	cout << "s.setFullTimeStatus(\"true\")" << endl; s.setFullTimeStatus(true); 
 	cout << "Full Time: " << s.isFullTime() << " [Expected: 1]" << endl << endl;

@@ -4,7 +4,7 @@
 #include "Student.h"
 
     Student::Student() 
-    :Person()
+        :Person()
 	{
         admit_day = 0;
 	    admit_month = 0;
@@ -13,26 +13,71 @@
         gpa = 0.0;
         unitsCompleted = 0;
         fullTime = false; 
-    }                     // explicitly call Person() on implementation
-    Student::Student(const Student& other){}  // call Person(other) on implementation
+    }              
+
+    Student::Student(const Student& other) 
+        :Person(other)
+    {
+        this->admit_day = other.admit_day;
+        this->admit_month = other.admit_month;
+        this->admit_year = other.admit_year;
+        this->school = other.school;
+        this->gpa = other.gpa;
+        this->unitsCompleted = other.unitsCompleted;
+        this->fullTime = other.fullTime;  
+    }  
+
     Student::Student(int urid, std::string netid, std::string lname, std::string fname, 
                int dob_day, int dob_mo, int dob_yr, 
                std::string email, std::string address, long phone,
                int day_admit, int month_admit, int year_admit,
-              School school, bool is_full_time, double units_completed){}
+              School school, bool is_full_time, double units_completed)
+        : Person(urid, netid, lname, fname, dob_day, dob_mo, dob_yr,
+               email, address, phone)
+    { 
+        admit_day = day_admit;
+        admit_month = month_admit;
+        admit_year = year_admit;
+        this->school = school;
+        gpa = 0.0;
+        unitsCompleted = units_completed;
+        fullTime = is_full_time;   
+    }
+
     Student::~Student(){}
 
-    std::list<std::string> Student::getCourses(){
-		std::list<std::string> courses;
+    std::list<std::string> Student::getCourses()
+    {
 		return courses;
 	}
-        void                   Student::addCourse(std::string course){}
-        void                   Student::removeCourse(std::string course){}
-        void                   Student::printCourses(){}
-        void                   Student::setCourses(std::list<std::string> courses){}
-        void                   Student::clearCourses(){}
 
-    struct tm              Student::getAdmitDate(){
+    void Student::addCourse(std::string course)
+    {
+        courses.push_back(course);
+    }
+
+    void Student::removeCourse(std::string course)
+    {
+        courses.remove(course);
+    }
+
+    void Student::printCourses()
+    {
+
+    }
+    
+    void Student::setCourses(std::list<std::string> courses)
+    {
+
+    }
+    
+    void Student::clearCourses()
+    {
+        courses.clear();
+    }
+
+    struct tm Student::getAdmitDate()
+    {
 		struct tm admitDate;
 		admitDate.tm_year =this-> admit_year;
 		admitDate.tm_mon = this->admit_month;
@@ -40,23 +85,48 @@
 		return admitDate;
 	}
 
-    Student::School Student::getSchool(){
+    Student::School Student::getSchool()
+    {
 		return school;
 	}
 
-    double Student::getGPA(){
+    double Student::getGPA()
+    {
 		return gpa;
 	}
-    double Student::getUnitsCompleted(){
+
+    double Student::getUnitsCompleted()
+    {
 		return unitsCompleted;
 	}
-    bool Student::isFullTime(){
-		return false;
+
+    bool Student::isFullTime()
+    {
+		return fullTime;
 	}
 	
-    void Student::setAdmitDate(int day, int month, int year){}
-    void Student::setSchool(Student::School school){}
-    void Student::setGPA(double gpa){}
-    void Student::setUnitsCompleted(double units){}
-    void Student::setFullTimeStatus(bool isFullTime){}
+    void Student::setAdmitDate(int day, int month, int year)
+    {
+
+    }
+
+    void Student::setSchool(Student::School school)
+    {
+        this->school = school;
+    }
+
+    void Student::setGPA(double gpa)
+    {
+        this->gpa = gpa;
+    }
+
+    void Student::setUnitsCompleted(double units)
+    {
+        unitsCompleted = units;
+    }
+
+    void Student::setFullTimeStatus(bool isFullTime)
+    {
+        fullTime = isFullTime;
+    }
 
