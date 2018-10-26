@@ -104,20 +104,36 @@ int main()
 	cout << "Adding/Removing Courses" << endl; 
 	cout << "*****************************************" << endl << endl;
 
-	//list <string> list1;
-	//list1.push_back("CMSC 240");
-	//cout << "s.setCourses(list1)" << endl; s.setCourses(list1); 
-	//cout << "Courses: " << s.printCourses() << "[Expected: CMSC 240]" << endl << endl;
+	list<string> list1;
+	list1.push_back("CMSC 240");
+	cout << "s.setCourses(list1)" << endl; s.setCourses(list1); 
+	cout << "Courses: ";
+	s.printCourses();
+	cout << " [Expected: CMSC 240]" << endl << endl;
 
-	//cout << "s.addCourse(\"CMSC 222\")" << endl; s.addCourse("CMSC 222"); 
-	//cout << "s.addCourse(\"CMSC 221\")" << endl; s.addCourse("CMSC 221"); 
-	//cout << "Courses: " << s.getCourses() << "[Expected: *not sure*]" << endl;
-	//cout << "Courses: " << s.printCourses() << "[Expected: CMSC 240, CMSC 222, CMSC 221]" << endl << endl;
+	cout << "s.addCourse(\"CMSC 222\")" << endl; s.addCourse("CMSC 222"); 
+	cout << "s.addCourse(\"CMSC 221\")" << endl; s.addCourse("CMSC 221"); 
+	cout << "Courses: ";
+	s.printCourses();
+	cout  << " [Expected: CMSC 240 CMSC 222 CMSC 221]" << endl << endl;
 
-	//cout << "s.removeCourse(\"CMSC 221\")" << endl; s.removeCourse("CMSC 221"); 
-	//cout << "Courses: " << s.printCourses() << "[Expected: CMSC 240, CMSC 222]" << endl;
-	//cout << "s.clearCourses()" << endl; s.clearCourses(); 
-	//cout << "Courses: " << s.printCourses() << "[Expected: \"\"]" << endl;
+	cout << "list<string> list2 = s.getCourses()" << endl;
+	list<string> list2 = s.getCourses();
+	cout << "list 2 courses: ";
+  	for (std::list<std::string>::iterator it=list2.begin(); it != list2.end(); ++it)
+    {
+        std::cout << *it << " ";
+    }
+    cout << " [Expected: CMSC 240 CMSC 222 CMSC 221]" << endl << endl;
+
+	cout << "s.removeCourse(\"CMSC 221\")" << endl; s.removeCourse("CMSC 221"); 
+	cout << "Courses: ";
+	s.printCourses();
+	cout << " [Expected: CMSC 240 CMSC 222]" << endl << endl;
+	cout << "s.clearCourses()" << endl; s.clearCourses(); 
+	cout << "Courses: ";
+	s.printCourses();
+	cout << " [Expected: ]" << endl;
 	
 	return 0;
 

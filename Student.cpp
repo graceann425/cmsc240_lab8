@@ -1,5 +1,6 @@
 
 #include <list>
+#include <iostream>
 #include "Person.h"
 #include "Student.h"
 
@@ -63,12 +64,16 @@
 
     void Student::printCourses()
     {
-
+        for (std::list<std::string>::iterator it=courses.begin(); it != courses.end(); ++it)
+        {
+            std::cout << *it << " ";
+        }
     }
     
     void Student::setCourses(std::list<std::string> courses)
     {
-
+        for (std::list<std::string>::iterator it=courses.begin(); it != courses.end(); ++it)
+            this->courses.push_back(*it);
     }
     
     void Student::clearCourses()
