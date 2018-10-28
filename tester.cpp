@@ -135,7 +135,7 @@ int main()
 
 	cout << "list<string> list2 = s.getCourses()" << endl;
 	list<string> list2 = s.getCourses();
-	cout << "list 2 courses: ";
+	cout << "list2 courses: ";
   	for (std::list<std::string>::iterator it=list2.begin(); it != list2.end(); ++it)
     {
         std::cout << *it << " ";
